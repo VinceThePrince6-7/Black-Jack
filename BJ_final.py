@@ -2,12 +2,12 @@ import random
 from dataclasses import dataclass
 
 # ==================================================
-# TOGGLE CARD COUNTING HERE
+# TOGGLE FOR KORTTÆLLING
 # ==================================================
-USE_CARD_COUNTING = False  # True = counting agent, False = baseline agent
+USE_CARD_COUNTING = False  # True = counting agent, False = basic agent
 
 # ==================================================
-# GAME SETTINGS
+# DECK INDSTILLINGER
 # ==================================================
 NUM_DECKS = 1
 MIN_CARDS_BEFORE_SHUFFLE = 11
@@ -39,7 +39,7 @@ def hilo(card):
     return 0
 
 # ==================================================
-# HAND
+# HÅND
 # ==================================================
 @dataclass
 class Hand:
@@ -158,4 +158,5 @@ class BlackjackEnv:
             return -5
         elif  tc < -5:
             return -5
+
     
