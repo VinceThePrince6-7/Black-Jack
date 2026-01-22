@@ -23,7 +23,7 @@ def epsilon_greedy(Q, state, epsilon):
     return random.choice(best)
 
 # ==================================================
-# TRAINING
+# TRÆNING
 # ==================================================
 def train(
     episodes=3_000_000,
@@ -40,7 +40,7 @@ def train(
 
     wins = losses = pushes = 0
 
-    # ---------------- TRAIN ----------------
+    # ---------------- TRÆN ----------------
     for ep in range(1, episodes + 1):
         state = env.reset()
         done = False
@@ -69,7 +69,7 @@ def train(
             # print(f"Training episode {ep}, epsilon={epsilon:.3f}")
             print(f"{wins / ep:.3f}")
 
-    # ---------------- EVALUATION ----------------
+    # ---------------- EVALUERING ----------------
     wins = losses = pushes = 0
     total_reward = 0
 
@@ -102,4 +102,5 @@ def train(
 # RUN
 # ==================================================
 if __name__ == "__main__":
+
     train()
